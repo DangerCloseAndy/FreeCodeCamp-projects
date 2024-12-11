@@ -7,7 +7,7 @@ console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
 console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
 
 NOTE, the commented out section does work here but it is not needed. I struggled for such a long time getting this function to work properly. My big mistakes were at first I used getAverage[i] in place of scores[i], which is incorrect. I also initially had parentheses
-in scores[i] rather than brackets, which was incorrect. This is because scores in this context is not a function, and i is an object which needed to be dynamically accessed, so brackets make sense. My final mistake was declaring scores as a global variable outside of my
+in scores[i] rather than brackets, which was incorrect. This is because scores in this context is not a function, and i is an object which needed to be dynamically accessed, so brackets make sense. My final mistake was declaring scores and sum as global variables outside of my
 function. This caused the return values or multiple log statements to be added to each other rather than printing the return value of that individual consol.log() line! for example instead of givng me
 console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89])); // 71.7
 console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95])); // 85.4
