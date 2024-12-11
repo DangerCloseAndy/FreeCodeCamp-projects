@@ -1,0 +1,17 @@
+function getAverage(scores) { let sum = 0; for(let i=0; i< scores.length; i++) {sum += scores[i];} return (sum/ scores.length)};
+/*const averageOne = getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]);
+console.log(averageOne);
+const averageTwo = getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]);
+console.log(averageTwo);*/
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89]));
+console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95]));
+
+NOTE, the commented out section does work here but it is not needed. I struggled for such a long time getting this function to work properly. My big mistakes were at first I used getAverage[i] in place of scores[i], which is incorrect. I also initially had parentheses
+in scores[i] rather than brackets, which was incorrect. This is because scores in this context is not a function, and i is an object which needed to be dynamically accessed, so brackets make sense. My final mistake was declaring scores as a global variable outside of my
+function. This caused the return values or multiple log statements to be added to each other rather than printing the return value of that individual consol.log() line! for example instead of givng me
+console.log(getAverage([92, 88, 12, 77, 57, 100, 67, 38, 97, 89])); // 71.7
+console.log(getAverage([45, 87, 98, 100, 86, 94, 67, 88, 94, 95])); // 85.4
+- it instead gave me 71.7, and then 157.1   due to scores and sum being incorrectly declared globally, rather than inside my function as seen in the correct code above. Make sure to remember your variables' contexts!
+Something else to note on how parameters work, is that you do not need to specifically declare what kind of parameter your parameter is before running the function call. I previously thought I NEEDED to declare scores as an empty array, when in reality that was not needed
+at all. Think of the parameters section of the function as jsut a place holder which is named whatever the heck you want. Then when you go to call your function, THAT is when yuo actually specify what type of argumnt it is and the values within if applicable, and it will 
+automatically be inserted into the function when the function runs. It took me awhile, but I learned an awful lot from this lesson.
