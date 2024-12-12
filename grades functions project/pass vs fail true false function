@@ -1,0 +1,9 @@
+function hasPassingGrade(score) {let pass=false; if(score<=59){pass=false}
+else {pass=true} return pass;
+  
+}
+
+
+console.log(hasPassingGrade(100)); // true
+console.log(hasPassingGrade(53));  // false
+console.log(hasPassingGrade(87));  // true
