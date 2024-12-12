@@ -1,0 +1,9 @@
+function studentMsg(totalScores, studentScore) {let passFail; if(hasPassingGrade(studentScore)==true){passFail= " You passed the course."}
+else{passFail=" You failed the course."}
+return "Class average: "+ getAverage(totalScores)+"."+" Your grade: "+ getGrade(studentScore)+"."+ passFail
+
+}
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37)); // Class average: 71.7. Your grade: F. You failed the course.
+
+NOTE: this took a while. see notes in my phone for extra details. I was able to solve all of the parts in this fucntion in the previous 3 steps pretty easily, but 
+-putting them togehter into a studentMsg function that works was what I struggled with! I looked it up on youtube and a guy did an excelletn job with it. Need to practice Javascript on Codewars.com
