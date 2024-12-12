@@ -1,0 +1,16 @@
+function getGrade(score) {let grade=0; if(score ===100) {grade ="A++"; }
+else if(score>= 90) {grade = "A"; }
+else if (score>=80) {grade = "B";}
+else if (score>=70){grade = "C";} 
+else if (score>=60){grade = "D";}
+else {grade = "F"} return grade; 
+}
+console.log(getGrade(100)); // A++
+console.log(getGrade(96));  // A
+console.log(getGrade(82));  // B
+console.log(getGrade(75));  // C
+console.log(getGrade(65));  // D
+console.log(getGrade(56));  // F
+
+NOTE, this project was mstly successful and I did it on my own! no stack overflow required, just looked through my notes on if, else if, and else statements. The one hang-up I had was on th equality statements =, ==, ===. 
+Make sure to note what eqaulities are what. = gives a value to a variable but doesn't check type. == is rarely used. === gives value to a variable AND checks for type. That's why I could use === for the A++ socre, but not for the others
